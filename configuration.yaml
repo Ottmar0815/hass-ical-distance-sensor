@@ -1,0 +1,15 @@
+sensor:
+  ####
+  # Entfernung Kalender-Termine
+  # https://www.home-assistant.io/docs/configuration/templating/
+  # https://www.home-assistant.io/integrations/command_line
+  ####
+  - platform: command_line
+    name: Kalender Entfernung
+    scan_interval: 1200
+    command: 'cd /config/ && python3 hass-ical-distance-sensor.py hass-ical-distance-config.yaml'
+    command_timeout: 40
+    unit_of_measurement: 'km'
+    value_template: '{{ value_json["distance"] }}'
+    json_attributes:
+      - Error

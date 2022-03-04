@@ -1,0 +1,33 @@
+####
+# Konfiguration Entfernungsberechnung nach "iCalendar"
+# Ein Account bei GEOAPIFY.com ist erforderlich.
+# https://www.geoapify.com/
+# Es muss auf der Webseite ein API_KEY erstellt werden und unter GEOAPIFY_API_KEY eingetragen werden.
+####
+
+# Hier muss die Heimat-Addresse angegeben werden. Von hier werden zu jeden Termin Hin- und Rückfahrt berechnet.
+HOME: 'Platz der Republik 1, Berlin'
+
+# API_KEY von Geoapify.com
+GEOAPIFY_API_KEY: 'API_KEY'
+
+# Link zur iCalendar-Datei, muss öffentlich zugänglich sein!
+ICAL_LINK: 'https://www.schulferien.org/media/ical/deutschland/feiertage_2022.ics'
+
+# Zeitzone als "tz database name"
+TIME_ZONE: 'Europe/Berlin'
+
+# Tageswechsel-Einstellung
+# gültige Werte sind:
+# 'Sunset'  - Der Tageswechsel findet zum Sonnenuntergang statt
+# 'FixTime' - Der Tageswechsel findet zu einer festen Uhrzeit statt
+DAY_CHANGE: 'Sunset'
+# feste Uhrzeit für Tageswechsel in "Stunden:Minuten:Sekunden", nur wirksam wenn DAY_CHANGE auf "FixTime" gestellt ist
+FIX_TIME: '22:00:00'
+
+# Korrektur nach OUT := IN * FACTOR + OFFSET
+OFFSET: 0.0
+FACTOR: 1.0
+
+# Mindest-Entfernung in Kilometer
+MIN: 10.0
